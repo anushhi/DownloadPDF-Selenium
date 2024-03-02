@@ -1,0 +1,118 @@
+{
+  "id": "7198bc2d-7552-428e-acb8-d4fe861a3a82",
+  "version": "2.0",
+  "name": "test1",
+  "url": "https://arxiv.org",
+  "tests": [{
+    "id": "08e0e644-3025-4e03-bac7-611df0907292",
+    "name": "downloadPdfTest",
+    "commands": [{
+      "id": "83ec0caa-34a3-40be-a675-da376f699b6c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec49f46e-8910-44d6-8b4c-6f26c4be56d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1728x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "748e4ad9-c9d3-4077-b8ec-598ed35e0f49",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Advanced Search",
+      "targets": [
+        ["linkText=Advanced Search", "linkText"],
+        ["css=.help > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Advanced Search')]", "xpath:link"],
+        ["xpath=//div[@id='header']/div[2]/form/div/div/p/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://arxiv.org/search/advanced')]", "xpath:href"],
+        ["xpath=//p/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Advanced Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5746987c-915e-4108-a31d-30ba639777f1",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "009726e3-123a-4f4c-bf51-ec96aa24db3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button:nth-child(3)",
+      "targets": [
+        ["css=.button:nth-child(3)", "css:finder"],
+        ["xpath=//main[@id='main-container']/div[2]/div[2]/div/div/form/section[3]/button", "xpath:idRelative"],
+        ["xpath=//section[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c25425b-7db3-4818-aab4-ced7e55a4add",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8837912-7607-4a3d-a13d-ca5654c36b66",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//main[@id='main-container']/div[2]/ol/li[1]/div/p/a",
+      "targets": [
+        ["linkText=arXiv:2402.19481", "linkText"],
+        ["css=.arxiv-result:nth-child(1) .list-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'arXiv:2402.19481')]", "xpath:link"],
+        ["xpath=//main[@id='main-container']/div[2]/ol/li/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://arxiv.org/abs/2402.19481')]", "xpath:href"],
+        ["xpath=//li/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'arXiv:2402.19481')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bb27212-5fbb-40f1-be8d-4784555776c6",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed322761-57e8-4585-a2cc-c2207817fa51",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "css=.tablecell > .link-external:nth-child (2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de28c201-cc9e-4716-b315-ad796b64e0ee",
+      "comment": "",
+      "command": "//mouseOut",
+      "target": "css=.link-external:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f3e05a9-77a5-4f54-88ef-8518624a196c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Download PDF",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f1b3487c-bfdd-4a49-b76c-fece3d2f357d",
+    "name": "PDF Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["08e0e644-3025-4e03-bac7-611df0907292"]
+  }],
+  "urls": ["https://www.hindawi.com/", "https://arxiv.org/"],
+  "plugins": []
+}
